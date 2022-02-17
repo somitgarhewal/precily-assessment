@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-mongoose.connect('mongodb+srv://somitdb:somitdbpassword@cluster0.in6qt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://somitdb:somitdbpassword@cluster0.in6qt.mongodb.net/precily?retryWrites=true&w=majority', {
   useUnifiedTopology: true,
   useNewUrlParser: true,
   useCreateIndex: true,
