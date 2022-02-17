@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../style.css';
 
 const MemberForm = ({ data, handleSubmit }) => {
     const [name, setName] = useState('')
@@ -28,7 +29,7 @@ const MemberForm = ({ data, handleSubmit }) => {
     }
 
     return (
-        <div className='container'>
+        <div className='container form-container'>
             <div className='row'>
                 <div className='border rounded m-5 p-5'>
                     Name:
@@ -48,7 +49,6 @@ const MemberForm = ({ data, handleSubmit }) => {
                     />
                     <br />
                     <br />
-
                     <button type="button" onClick={() => handleOnSubmit()} className='mt-3'>Submit</button>
                 </div>
             </div>

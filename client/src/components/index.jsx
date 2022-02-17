@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Resizable } from 'react-resizable';
 import './style.css';
-import './example.css';
 import axios from 'axios';
 import MemberForm from './form';
 import Table from './table';

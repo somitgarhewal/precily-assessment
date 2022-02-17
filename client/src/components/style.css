@@ -63,3 +63,34 @@
   bottom: 0;
   transform: rotate(45deg);
 }
+
+.form-container{
+  min-height: 100%;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.layoutRoot {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.box {
+  display: -webkit-inline-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ccc;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.box .text {
+  text-align: center;
+}
