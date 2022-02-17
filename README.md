@@ -1,13 +1,13 @@
 # precily-assessment
 
-**clone the project**
+**clone the project** => 
 git clone https://github.com/somitgarhewal/precily-assessment.git
 
-**change directory**
+**change directory** => 
 cd precily-assessment
 
-**install dependencies**
+**install dependencies** => 
 npm install
 
-**run project**
+**run project** => 
 npm run start
