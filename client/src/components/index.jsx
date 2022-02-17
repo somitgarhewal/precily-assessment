@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Resizable, ResizableBox } from 'react-resizable';
+import { Resizable } from 'react-resizable';
 import './style.css';
 import './example.css';
 import axios from 'axios';
@@ -46,19 +46,19 @@ export default class Example extends Component {
 
   onFirstBoxResize = (event, { element, size, handle }) => {
     if (size.width <= 25) return;
-    if (handle == 's') {
+    if (handle === 's') {
       this.setState({
         box1height: size.height,
         box1style: { ...this.state.box1style, height: size.height },
       })
-    } else if (handle == 'e') {
+    } else if (handle === 'e') {
       this.setState({
         box1width: size.width,
         box1style: { ...this.state.box1style, width: size.width },
         box2style: { ...this.state.box2style, width: window.innerWidth - (size.width + 60 + this.state.box2style.marginRight) },
         box2width: window.innerWidth - (size.width + 60 + this.state.box2style.marginRight)
       });
-    } else if (handle == 'n') {
+    } else if (handle === 'n') {
       if ((this.state.box1style.marginTop + this.state.box1style.height - size.height) <= 0) return;
       this.setState({
         box1height: size.height,
@@ -75,19 +75,19 @@ export default class Example extends Component {
 
   onSecondBoxResize = (event, { element, size, handle }) => {
     if (size.width <= 25) return;
-    if (handle == 's') {
+    if (handle === 's') {
       this.setState({
         box2height: size.height,
         box2style: { ...this.state.box2style, height: size.height },
       })
-    } else if (handle == 'w') {
+    } else if (handle === 'w') {
       this.setState({
         box2width: size.width,
         box2style: { ...this.state.box2style, width: size.width },
         box1style: { ...this.state.box1style, width: window.innerWidth - (size.width + 60 + this.state.box1style.marginLeft) },
         box1width: window.innerWidth - (size.width + 60 + this.state.box1style.marginLeft)
       });
-    } else if (handle == 'n') {
+    } else if (handle === 'n') {
       if ((this.state.box2style.marginTop + this.state.box2style.height - size.height) <= 0) return;
       this.setState({
         box2height: size.height,
@@ -105,17 +105,17 @@ export default class Example extends Component {
 
   onThirdBoxResize = (event, { element, size, handle }) => {
     if (size.width <= 25) return;
-    if (handle == 's') {
+    if (handle === 's') {
       this.setState({
         box3height: size.height,
         box3style: { ...this.state.box3style, height: size.height },
       })
-    } else if (handle == 'w') {
+    } else if (handle === 'w') {
       this.setState({
         box3width: size.width,
         box3style: { ...this.state.box3style, width: size.width, marginLeft: this.state.box3style.marginLeft + this.state.box3style.width - size.width },
       });
-    } else if (handle == 'n') {
+    } else if (handle === 'n') {
       if ((this.state.box3style.marginTop + this.state.box3style.height - size.height) <= 0) return;
       this.setState({
         box3height: size.height,
